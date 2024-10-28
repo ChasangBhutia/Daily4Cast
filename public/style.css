@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("Images/clearNight.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.yellow-text{color: yellow;}
+.white-text{color: white;}
+.uppercase-text{text-transform: uppercase;}
+.padding-10{padding: 10px 20px;}
+.flex-box{display: flex;}
+.family-montserrat{font-family: "Montserrat";}
+.back-glass{box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;background: rgba(225,225,225,0.2);border-radius: 10px;}
+.icon-size{height: 50px;width: 50px;color: white;}
+.box-shadow{box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+
+.container{
+    width: 800px;
+    margin: auto;
+    margin-top: 40px;
+    height: 650px;
+    padding: 0px 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    border-radius: 10px;
+    background-color:rgb(0,0,0,0.5);
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    height: 70px;
+}
+
+.logo{
+    font-size: 30px;
+    font-family: "Matemasie", system-ui;
+    color: rgb(46, 250, 46);
+    align-items: center;
+}
+.four{
+    font-size: 50px;
+    color: orangered;
+    margin: 0px 5px;
+    margin-bottom: 10px;
+}
+
+
+.navbar .searchBar input{
+    height: 30px;
+    width: 250px;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+}
+.navbar .searchBar button{
+    width: 100px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    background: rgb(46, 250, 46);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.navbar .searchBar button:hover{
+    background: rgb(4, 144, 4);
+}
+
+.tempBoxNav{
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.mainTempBox{
+    text-align: center;
+    height: 160px;
+    align-items: center;
+    padding:10px 30px;
+}
+
+.mainTempBox .leftMainTempBox{
+    flex: 1;
+}
+.mainTempBox .leftMainTempBox .mainTemp{
+    font-size: 6rem;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+
+.mainTempBox .rigthMainTempBox{
+    justify-content: center;
+    padding-left: 150px;
+    flex: 1;
+}
+
+.mainTempBox .rigthMainTempBox img{
+    height: 130px;
+    width: 130px;
+}
+
+.weatherDes{
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.weatherDescriptions{
+    flex-direction: column;
+    gap: 15px;  
+}
+
+
+.weatherDescriptions .row{
+    justify-content: space-around;
+    align-items: center;
+}
+
+.weatherDescriptions .row .card{
+    height: 120px;
+    width: 130px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Montserrat";
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.weatherDailyForecast{
+    height: 150px;
+    padding:5px 15px;
+}
+
+.weatherDailyForecastItem{
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding:5px 15px;
+}
+
+
+.weatherDailyForecastItemContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+.weatherDailyForecastItemContainer p{
+    font-weight: 600;
+    font-size: 13px;
+}

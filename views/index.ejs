@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily4Cast | weather forecast app</title>
+    <link rel="icon" href="images/logo.png">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Matemasie&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CZ:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container flex-box">
+       <nav class="navbar flex-box">
+        <h1 class="logo flex-box">
+            Daily<span class="four">4</span>Cast
+        </h1> 
+        <form class="searchBar flex-box" action="/search"  method="POST">
+            <input class="family-montserrat box-shadow" type="text" id="location" name="location" placeholder="Search for Location..." required>
+            <button class="white-text family-montserrat box-shadow">Search</button>
+        </form>
+       </nav> 
+
+        <nav class="tempBoxNav back-glass padding-10 flex-box">
+            <h2 class="placeName white-text uppercase-text"><%= weatherDetails.searchedLocation %> | <span class="countryCode yellow-text uppercase-text"><%= weatherDetails.countryName %></span></h2>
+            <h2 class="date white-text"><%= date %> | <span class="day yellow-text uppercase-text"><%= day %></span></h2>
+        </nav>
+        <div class="mainTempBox back-glass">
+            <section class=" flex-box">
+                <aside class="leftMainTempBox flex-box">
+                    <h1 class="mainTemp yellow-text family-montserrat"><%= weatherDetails.currentTemp %>°C</h1>
+                </aside>
+                <aside class="rigthMainTempBox flex-box">
+                    <img src="<%= weatherDetails.currentWeatherIcon %>" alt="weather icon">
+                </aside>
+            </section>
+            <h2 class="weatherDes white-text uppercase-text"><%= weatherDetails.currentWeatherDes %></h2>
+       </div>
+        
+
+        <section class="weatherDescriptions white-text">
+            <div class="row flex-box">
+                <div class="card back-glass flex-box">
+                    <img class="icon-size" src="Images/pressure.png" alt="">
+                    <h3 class="yellow-text">PRESSURE</h3>
+                    <span><%= weatherDetails.pressure %>hPa</span>
+                </div>
+                <div class="card back-glass flex-box">
+                    <img class="icon-size" src="Images/humidity.png" alt="">
+                    <h3 class="yellow-text">HUMIDITY</h3>
+                    <span><%= weatherDetails.humidity %>%</span>
+                </div>
+                <div class="card back-glass flex-box">
+                    <img class="icon-size" src="Images/wind.png" alt="">
+                    <h3 class="yellow-text">WIND</h3>
+                    <span><%= weatherDetails.wind %>m/s</span>
+                </div>
+                <div class="card back-glass flex-box">
+                    <img class="icon-size" src="Images/max-temperature.png" alt="">
+                    <h3 class="yellow-text">MAX-TEMP</h3>
+                    <span><%= weatherDetails.maxTemp %>°C</span>
+                </div>
+                <div class="card back-glass flex-box">
+                    <img class="icon-size" src="Images/min-temperature.png" alt="">
+                    <h3 class="yellow-text">MIN-TEMP</h3>
+                    <span><%= weatherDetails.minTemp %>°C</span>
+                </div>
+            </div>
+        </section>
+
+       <section class="weatherDailyForecast white-text back-glass">
+            <h1 class="family-montserrat yellow-text">Daily Forecast</h1>
+            <ul class="weatherDailyForecastItem flex-box">
+                <% dailyForecast.map(item=>{ %>
+                    <div class="weatherDailyForecastItemContainer family-montserrat">
+                        <p class="day"><%= item.day %></p>
+                        <img src="<%= item.icon %>" alt="" class="weatherDailyIcons" height="70px" width="70px">
+                        <p><%= item.des %></p>
+                    </div>
+                <% }); %>
+                </ul>
+        </section>
+
+
+       
+    </div>
+</body>
+</html>

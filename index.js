@@ -18,6 +18,7 @@ const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 const today = new Date();
 const date = today.toLocaleDateString();
 const day = weekdays[today.getDay()];
+const year = today.getFullYear();
 
 app.get('/', async(req,res)=>{    
     const dailyForecast = [
@@ -60,7 +61,7 @@ app.get('/', async(req,res)=>{
         minTemp : 100,
         wind : 2.63
     }
-    res.render("index",{weatherDetails,dailyForecast,date,day});    
+    res.render("index",{weatherDetails,dailyForecast,date,day,year});    
 });
 
 
@@ -124,7 +125,7 @@ app.post('/search',async (req,res)=>{
             minTemp : data.data.list[0].main.temp_min,
             wind : data.data.list[0].wind.speed
         }
-        res.render("index",{weatherDetails,dailyForecast,date,day}); 
+        res.render("index",{weatherDetails,dailyForecast,date,day,year}); 
     }
 
     

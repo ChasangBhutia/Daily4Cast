@@ -19,4 +19,8 @@ A weather-telling web application that provides real-time updates on the current
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ChasangBhutia/Daily4Cast.git
+   cd weatherApp
+   npm install
+   npm start
+

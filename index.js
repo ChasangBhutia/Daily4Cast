@@ -82,7 +82,7 @@ app.post('/search',async (req,res)=>{
     
     
     if(statusCode === 404){
-        res.render('error', {location});
+        res.render('error', {location, year});
     }else{
         data.data.list.forEach((item)=>{
             let rawDailyForecastDet = {

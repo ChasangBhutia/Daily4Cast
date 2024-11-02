@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Error</title>
+    <title>404 Error | Page not found</title>
     <link rel="icon" href="images/logo.png">
 
     <!-- GOOGLE FONTS -->
@@ -14,8 +14,18 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="404Page">
-    <h1>404! Location : <%= location %>  not found</h1>
-    <a href="/"><button> Continue Searching for Location </button></a>
+<body class="errorPageContainer">
+    <div class="errorPage flex-box back-glass box-shadow">
+        <section class="leftContainer family-montserrat white-text">
+            <h1 class="yellow-text">Oops!</h1>
+            <h2 class="yellow-text">404</h2>
+            <p>The location: <span class="yellow-text"><%= location %></span> not found</p>
+            <a href="/"><button> Go Back </button></a>
+        </section>
+        <section class="rightContainer">
+            <img src="Images/sun.gif" alt="">
+        </section>
+    </div>
+    <footer><a href="https://www.linkedin.com/in/chasang" target="_blank">©Daily4Cast By @Chasang-<%= year %></a></footer>
 </body>
 </html>

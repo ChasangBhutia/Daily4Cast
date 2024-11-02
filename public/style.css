@@ -5,8 +5,9 @@
 body{
     background-image: url("Images/clearNight.jpg");
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+    background-size: 100% 100%;
 }
+
 
 .yellow-text{color: yellow;}
 .white-text{color: white;}
@@ -17,6 +18,64 @@ body{
 .back-glass{box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;background: rgba(225,225,225,0.2);border-radius: 10px;}
 .icon-size{height: 50px;width: 50px;color: white;}
 .box-shadow{box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+
+
+/* 404 page */
+.errorPageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.errorPage{
+    height: 400px;
+    width: 900px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 120px;
+}
+
+.errorPage .leftContainer h1{
+    font-size: 6rem;
+}
+.errorPage .leftContainer h2{
+    font-size: 3rem;
+    margin-top: 20px;
+}
+.errorPage .leftContainer a button{
+    margin-top: 20px;
+    height: 50px;
+    width: 100px;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.errorPage .leftContainer a button:hover{
+    background-color: rgb(73, 73, 1);
+    color: white;
+}
+
+.errorPage .rightContainer{
+    flex: 0.8;
+    padding: 20px;
+} 
+
+.errorPage .leftContainer{
+    flex: 1.2;
+    padding: 50px;
+}
+.errorPage .rightContainer img{
+    height: 360px;
+    width: 400px;
+    border-radius:8px;
+}
+
+
+
 
 .container{
     width: 800px;
@@ -163,7 +222,8 @@ body{
 footer{
     width: fit-content;
     margin: auto;
-    margin-top: 10px;   
+    margin-top: 10px;  
+    padding-bottom: 10px; 
 }
 
 footer a{
@@ -179,6 +239,26 @@ footer a:hover{
 /* Responsive design */
 
 @media screen and (max-width:1000px){
+
+    .errorPage{
+        width: 700px;
+        height: 300px;
+    }
+    .errorPage .leftContainer h1{
+        font-size: 4rem;
+    }
+    .errorPage .leftContainer h2{
+        font-size: 2rem;
+    }
+    .errorPage  .rightContainer img{
+        height: 260px;
+        width: 300px;
+    }
+    .errorPage .leftContainer a button{
+        height: 30px;
+        width:100px;
+    }
+
      .container{
         width: 600px;
         height: fit-content;
@@ -244,6 +324,29 @@ footer a:hover{
 
 
 @media screen and (max-width:775px){
+
+    .errorPage{
+        width: 500px;
+    }
+
+    .errorPage .leftContainer h1{
+        font-size: 3rem;
+    }
+    .errorPage .leftContainer{
+        padding: 15px;
+        padding-top: 50px;
+    }
+    .errorPage .leftContainer h2{
+        margin-top: 10px;
+    }
+    .errorPage .leftContainer a button{
+        font-size: 15px;
+    }
+
+    .errorPage .rightContainer img{
+        width: 200px;
+    }
+
     body{
         background-size:100% 100%;
         padding-bottom: 40px;
@@ -325,7 +428,34 @@ footer a:hover{
 }
 
 
+@media screen and (max-width:525px) {
+    .errorPage{
+        width: 400px;
+    }
+    .errorPage .rightContainer img{
+        width: 150px;
+    }
+}
+
 @media screen and (max-width:440px) {
+    .errorPageContainer{
+        padding-top: 30px;
+    }
+    .errorPage{
+        flex-direction: column-reverse;
+        height: fit-content;
+        width: fit-content;
+    }
+    .errorPage .rightContainer img{
+        width: 300px;
+    }
+    .errorPage .rightContainer{
+        padding-bottom: 10px;
+    }
+    .errorPage .leftContainer{
+        padding-top: 0px;
+    }
+
     body{
         background-size: 500px 1000px;
     }

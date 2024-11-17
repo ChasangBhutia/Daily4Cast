@@ -11,7 +11,8 @@ const { default:axios } = require('axios');
 const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
-app.set('view engine','ejs');
+
+app.set('view engine', 'ejs');
 
 
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -98,7 +99,7 @@ app.post('/search',async (req,res)=>{
         rawDailyForecast.map(item=>{
             const dateString = item.date;
             const date = new Date(dateString);
-            const weekday = weekdays[date.getDay()];  
+            const weekday = weekdays[date.getDay()];   
             item.day = weekday;        
         });
     
@@ -132,7 +133,7 @@ app.post('/search',async (req,res)=>{
 
 });
 
-app.listen(port, (req,res)=>{
+app.listen(process.env.PORT || port, (req,res)=>{
     console.log(`Server is running on post:${port}`);
     
 });

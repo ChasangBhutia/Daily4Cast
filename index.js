@@ -2,11 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 const axios = require('axios'); 
+const path = require('path');
+
 
 const apiId = process.env.API_KEY;
 const port = process.env.PORT || 3000;
 
 const app = express();
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');

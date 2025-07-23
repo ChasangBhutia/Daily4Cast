@@ -7,6 +7,7 @@ A weather-telling web application that provides real-time updates on the current
 - **Current Weather Data**: Displays the current temperature, pressure, wind speed, humidity, and more.
 - **Daily Forecast**: Provides a daily weather forecast for the specified location.
 - **User-Friendly Interface**: Intuitive design for easy navigation and accessibility.
+- - **Live Demo**: https://daily4cast.onrender.com/
 
 ## Technologies Used
 
